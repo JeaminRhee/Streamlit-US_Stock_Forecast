@@ -62,10 +62,10 @@ future = m.make_future_dataframe(periods=period)
 forecast = m.predict(future)
 
 # Show and plot forecast
-st.subheader('AI가 예측하는 미래 주가 (trend=미래 주가)')
+st.subheader('AI가 예측하는 미래 주가 (yhat_upper=미래 주가 상단치)')
 st.write(forecast.tail())
     
-st.write(f'{n_years}년 주가 예측 차트')
+st.write(f'{n_years}년 주가 예측 차트 (하늘색이 예측범위. 하늘색 상단=yhat_upper)')
 fig1 = plot_plotly(m, forecast)
 # fig1 = m.plot(forecast)
 st.plotly_chart(fig1)

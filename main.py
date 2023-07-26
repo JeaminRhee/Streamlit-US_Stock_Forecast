@@ -3,8 +3,14 @@ import streamlit as st
 from datetime import date
 
 import yfinance as yf
-from fbprophet import Prophet
-from fbprophet.plot import plot_plotly
+
+# https://facebook.github.io/prophet/docs/quick_start.html
+# from fbprophet import Prophet
+# from fbprophet.plot import plot_plotly
+# from prophet.plot import plot_plotly, plot_components_plotly
+# prophet.plot needs notebook & ipywidets as prerequisites
+
+from prophet import Prophet
 from plotly import graph_objs as go
 
 START = "2016-01-01"
@@ -57,9 +63,10 @@ st.subheader('Forecast data')
 st.write(forecast.tail())
     
 st.write(f'Forecast plot for {n_years} years')
-fig1 = plot_plotly(m, forecast)
+# fig1 = plot_plotly(m, forecast)
+fig1 = m.plot(forecast)
 st.plotly_chart(fig1)
 
 st.write("Forecast components")
-fig2 = m.plot_components(forecast)
+fig2 = m.plot_components(forecast) # 
 st.write(fig2)

@@ -15,7 +15,7 @@ from prophet.plot import plot_plotly, plot_components_plotly
 from prophet import Prophet
 from plotly import graph_objs as go
 
-START = "2016-01-01"
+START = "2013-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
 
 st.title('US Stock AI 주가 예측')

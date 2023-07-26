@@ -1,13 +1,14 @@
+# 참고자료 01: https://github.com/Franky1/Streamlit-Prophet-Test
+# 참고자료 02: https://facebook.github.io/prophet/docs/quick_start.html
+
 # pip install streamlit fbprophet yfinance plotly
 import streamlit as st
 from datetime import date
 
 import yfinance as yf
 
-# https://facebook.github.io/prophet/docs/quick_start.html
 # from fbprophet import Prophet
 # from fbprophet.plot import plot_plotly
-
 from prophet.plot import plot_plotly, plot_components_plotly
 # prophet.plot needs notebook & ipywidets as prerequisites
 
